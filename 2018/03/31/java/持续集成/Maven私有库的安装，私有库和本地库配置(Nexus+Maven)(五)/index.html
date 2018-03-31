@@ -85,7 +85,7 @@
 <meta property="og:image" content="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522506962660.jpg">
 <meta property="og:image" content="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522507575385.jpg">
 <meta property="og:image" content="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522507692656.jpg">
-<meta property="og:updated_time" content="2018-03-31T14:55:06.885Z">
+<meta property="og:updated_time" content="2018-03-31T15:04:01.842Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Maven私有库的安装，私有库和本地库配置(Sonatype Nexus + Maven)(五)">
 <meta name="twitter:description" content="持续集成之 nexus 私有库安装与配置maven 本地库配置连接 nexus 私有库">
@@ -421,7 +421,7 @@
 <li><code>virtual</code> 虚拟仓库：用于适配 <code>Maven 1</code>；</li>
 <li>一般用到的仓库种类是 <code>hosted</code>、<code>proxy</code></li>
 </ul>
-<p>==如果构建的 Maven 项目本地仓库没有对应的依赖包，那么就会去 Nexus 私服去下载， 如果Nexus私服也没有此依赖包，就回去远程中央仓库下载依赖，这些中央仓库就是proxy。<br>Nexus 私服下载成功后再下载至本地 Maven 库供项目引用。==</p>
+<p><em>==如果构建的 Maven 项目本地仓库没有对应的依赖包，那么就会去 Nexus 私服去下载， 如果Nexus私服也没有此依赖包，就回去远程中央仓库下载依赖，这些中央仓库就是proxy。<br>Nexus 私服下载成功后再下载至本地 Maven 库供项目引用。==</em></p>
 <p>14、设置 <code>proxy</code> 代理仓库(<code>Apache Snapshots/Central/Codehaus Snapshots</code>)准许远程下载</p>
 <p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522506962660.jpg" alt="开启远程索引下载"></p>
 <p>15、配置本地 <code>maven</code> 配置文件：<a href="http://owmbug5s4.bkt.clouddn.com/config/settings-nexus.xml" target="_blank" rel="noopener">settings-nexus.xml</a></p>
