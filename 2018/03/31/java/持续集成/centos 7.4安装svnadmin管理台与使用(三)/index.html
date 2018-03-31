@@ -83,7 +83,7 @@
 <meta property="og:image" content="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522491019248.jpg">
 <meta property="og:image" content="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485527395.jpg">
 <meta property="og:image" content="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485537676.jpg">
-<meta property="og:updated_time" content="2018-03-31T10:14:56.763Z">
+<meta property="og:updated_time" content="2018-03-31T13:47:39.444Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="centos 7.4安装svnadmin管理台与使用(三)">
 <meta name="twitter:description" content="持续集成之centos 7.4 安装  subversion 的管理台： svnadmin安装 svnadmin 之前需要先安装 apache 和 subversionavnadmin需要java服务容器启动，如tomcat、Jboss、jetty本文使用 tomcat7…">
@@ -387,14 +387,14 @@
 <p>6、创建 <code>svnadmin</code> 数据库并导入相应数据（<code>UTF-8</code> 编码）<br>     执行 <code>db/mysql5.sql</code> 和 <code>db/lang/en.sql</code></p>
 <p>7、启动 <code>tomcat</code><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /root/svnadmin-tomcat/bin</span><br><span class="line"><span class="meta">#</span> ./startup.sh</span><br></pre></td></tr></table></figure></p>
 <p>8、访问 <a href="http://localhost:9000/svnadmin/" target="_blank" rel="noopener">http://localhost:9000/svnadmin/</a>  默认账号：<code>admin</code>、密码：<code>admin</code></p>
-<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485248057.jpg" alt="登陆"></p>
+<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485248057.jpg" alt="登陆" title="登陆"></p>
 <p>9、创建库</p>
-<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522490773500.jpg" alt="创建库"></p>
+<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522490773500.jpg" alt="创建库" title="创建库"></p>
 <p>10、项目认证失败，配置库目录权限（每次创建一个新库都要进行授权）,并在管理台给项目的用户组添加用户</p>
-<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522490904773.jpg" alt="认证失败"><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /svn/</span><br><span class="line"><span class="meta">#</span> chown -R apache.apache tt_test</span><br><span class="line"><span class="meta">#</span> chmod -R 777 tt_test</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522491019248.jpg" alt="设置用户组"></p>
-<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485527395.jpg" alt="设置用户"></p>
-<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485537676.jpg" alt="给用户组添加用户"></p>
+<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522490904773.jpg" alt="认证失败" title="认证失败"><br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> cd /svn/</span><br><span class="line"><span class="meta">#</span> chown -R apache.apache tt_test</span><br><span class="line"><span class="meta">#</span> chmod -R 777 tt_test</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522491019248.jpg" alt="设置用户组" title="设置用户组"></p>
+<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485527395.jpg" alt="设置用户" title="设置用户"></p>
+<p><img src="http://owmbug5s4.bkt.clouddn.com/tt/blog/1522485537676.jpg" alt="给用户组添加用户" title="给用户组添加用户"></p>
 <p>11、关闭 <code>SELinux</code>（Linux 的访问控制）<br>修改 <code>/etc/selinux/config</code> 文件<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> vi /etc/selinux/config</span><br></pre></td></tr></table></figure></p>
 <p>将 <code>SELINUX=enforcing</code> 改为 <code>SELINUX=disabled</code><br>重启服务器<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> reboot</span><br></pre></td></tr></table></figure></p>
 
